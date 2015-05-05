@@ -16,12 +16,10 @@
 
 package io.spring.isomorphic;
 
-public interface CommentRepository {
+import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-	Iterable<Comment> findAll();
-
-	Comment save(Comment comment);
-
-	Comment find(Long id);
+@RepositoryRestResource(collectionResourceRel = "products", path = "products")
+public interface ProductRepository extends PagingAndSortingRepository<Product, Long> {
 
 }

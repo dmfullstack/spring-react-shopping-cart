@@ -37,7 +37,7 @@ configurations.all {
 }
 
 jar {
-  baseName = 'spring-react-isomorphic'
+  baseName = 'spring-react-shopping-cart'
 }
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -50,6 +50,10 @@ repositories {
 
 dependencies {
   compile("org.springframework.boot:spring-boot-starter-web")
+  compile("org.springframework.boot:spring-boot-starter-data-jpa")
+  compile("org.springframework.boot:spring-boot-starter-data-rest")
+  compile("org.apache.commons:commons-lang3:3.1")
+  compile("com.h2database:h2")
   compile("org.webjars:react:0.13.1")
   testCompile("org.springframework.boot:spring-boot-starter-test")
 }

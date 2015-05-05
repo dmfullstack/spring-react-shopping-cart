@@ -1,7 +1,6 @@
-# spring-react-isomorphic
-Spring + React isomorphic templating application
+# spring-react-shopping-carty
+A shopping cart example written in Spring and React using Nashorn for templating.
 
-More details about Spring Script Templating at https://jira.spring.io/browse/SPR-12266.
 
 ##JDK 8 Notes
 Nashorn is still in active development, it is recommended that you use the latest version possible.

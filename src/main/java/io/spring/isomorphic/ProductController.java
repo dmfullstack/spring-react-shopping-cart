@@ -30,26 +30,20 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
 @Controller
-public class CommentController {
+public class ProductController {
 
-	private CommentRepository commentRepository;
+	private ProductRepository productRepository;
 	private final List<SseEmitter> sseEmitters = new ArrayList<>();
 
 	@Autowired
-	CommentController(CommentRepository commentRepository) {
-		this.commentRepository = commentRepository;
-	}
-
-	@RequestMapping(value = "/", produces = "application/json")
-	@ResponseBody
-	Iterable<Comment> jsonFindAll() {
-		return this.commentRepository.findAll();
+	ProductController(ProductRepository productRepository) {
+		this.productRepository = productRepository;
 	}
 
 	@RequestMapping(value = "/", method = RequestMethod.POST, produces = "application/json")
 	@ResponseBody
-	Comment jsonCreate(Comment comment) throws IOException {
-		Comment newComment = this.commentRepository.save(comment);
+	Product jsonCreate(Product comment) throws IOException {
+		Product newComment = this.productRepository.save(comment);
 		for (SseEmitter sseEmitter : this.sseEmitters) {
 			// Servlet containers don't always detect ghost connection, so we must catch exceptions ...
 			try {
@@ -61,8 +55,7 @@ public class CommentController {
 
 	@RequestMapping("/")
 	String render(Model model) {
-		model.addAttribute("title", "Layout example");
-		model.addAttribute("comments", this.commentRepository.findAll());
+		model.addAttribute("products", this.productRepository.findAll());
 		return "index";
 	}
 
