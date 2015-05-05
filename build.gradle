@@ -20,6 +20,12 @@ apply plugin: 'spring-boot'
 apply plugin: 'net.eikehirsch.react'
 apply plugin: 'eclipse'
 
+jsx{
+	sourcesDir = 'src/main/resources/static/jsx'
+	destDir = 'src/main/resources/static/output'
+}
+processResources.dependsOn('jsx')
+
 configurations.all {
   resolutionStrategy {
     eachDependency { DependencyResolveDetails details ->
