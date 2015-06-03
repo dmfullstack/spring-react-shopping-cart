@@ -1,7 +1,4 @@
-React.render(<CommentForm onCommentSubmit={ function(comment) {
- $.post('/', comment, null, 'json');
-} }/>, document.getElementById("navbar"));
-
-$.getJSON('/', function( data ) {
-    React.render(<CommentList comments={ data }/>, document.getElementById("comments"));
+React.render(<Cart />, document.getElementById('cart'));
+$.get('/products',function(data){
+	React.render(<ProductsList products={data._embedded.products} />, document.getElementById('products-list'));
 });

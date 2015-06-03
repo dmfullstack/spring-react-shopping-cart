@@ -16,7 +16,7 @@ public class Product {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String name;
-	private Currency currency;
+	private String currency;
 	private BigDecimal price;
 	private String image;
 	private String url;
@@ -27,7 +27,7 @@ public class Product {
 	
 	public Product(String name, Currency currency, BigDecimal price, String image) {
 		this.name = name;
-		this.currency = currency;
+		this.currency = currency.getSymbol();
 		this.price = price;
 		this.image = image;
 	}
@@ -44,11 +44,11 @@ public class Product {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Currency getCurrency() {
+	public String getCurrency() {
 		return currency;
 	}
 	public void setCurrency(Currency currency) {
-		this.currency = currency;
+		this.currency = currency.getSymbol();
 	}
 	public BigDecimal getPrice() {
 		return price;

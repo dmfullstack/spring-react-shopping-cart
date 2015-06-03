@@ -22,11 +22,9 @@ var ProductsList = React.createClass({
         });
 
         return (
-          <div id="products-list" className="products-list">
-	          <ul className="clearfix">
+        	  <ul className="clearfix">
 	            {products}
 	          </ul>
-          </div>
         );
     }
 });

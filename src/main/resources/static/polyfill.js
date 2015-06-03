@@ -1,8 +1,8 @@
 var global = this;
 var console = {};
 var $ = {
-		subscribe: function(){},
-		publish: function(){}
+		publish: function(){},
+		subscribe: function(){}
 };
 console.debug = print;
 console.warn = print;

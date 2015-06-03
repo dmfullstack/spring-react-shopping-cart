@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bootiful Beer</title>
+    <title>Spring Brewed</title>
     <link href="lib/css/bootstrap.min.css" rel="stylesheet" />
     <link href="style/style.css" rel="stylesheet" />
   </head>
@@ -10,20 +10,24 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1>Bootiful Beer Shop</h1>
+          <h1>Spring Brewed</h1>
         </div>
       </div>
       <div class="row">
         <div class="col-md-8">
           <h3>Products</h3>
 
-          <%= React.renderToString(React.createElement(ProductsList, { products: products} )) %>
+		  <div id="products-list" class="products-list">
+          	<%= React.renderToString(React.createElement(ProductsList, { products: products} )) %>
+          </div>
 
         </div>
         <div class="col-md-4">
           <h3>Shopping Cart</h3>
 		  
-		  <%= React.renderToString(React.createElement(Cart)) %>
+		  <div id="cart" class="cart">
+		  	<%= React.renderToString(React.createElement(Cart)) %>
+		  </div>
         </div>
       </div>
     </div>
@@ -34,5 +38,6 @@
     <script src="output/product.js"></script>
     <script src="output/product-list.js"></script>
     <script src="output/cart.js"></script>
+    <script src="output/client.js"></script>
   </body>
 </html>

@@ -15,14 +15,14 @@ import org.springframework.web.servlet.view.script.ScriptTemplateConfigurer;
 import org.springframework.web.servlet.view.script.ScriptTemplateViewResolver;
 
 @SpringBootApplication
-public class IsomorphicApplication extends WebMvcConfigurerAdapter {
+public class Application extends WebMvcConfigurerAdapter {
 
     private static final String[] CLASSPATH_RESOURCE_LOCATIONS = {
             "classpath:/META-INF/resources/", "classpath:/resources/",
             "classpath:/static/", "classpath:/public/" };
 
     public static void main(String[] args) {
-        SpringApplication.run(IsomorphicApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
     @Override
@@ -70,7 +70,6 @@ public class IsomorphicApplication extends WebMvcConfigurerAdapter {
         configurer.setScripts("static/polyfill.js",
                 "static/lib/js/ejs.min.js",
                 "/META-INF/resources/webjars/react/0.13.1/react.js",
-//                "/META-INF/resources/webjars/react/0.13.1/JSXTransformer.js",
                 "static/render.js",
                 "static/output/product.js",
                 "static/output/cart.js",

@@ -8,7 +8,7 @@ var Cart = React.createClass({
       return {
         items: [],
         total: 0,
-        currency: 'EUR'
+        currency: 'GBP'
       };
     },
 
@@ -67,14 +67,12 @@ var Cart = React.createClass({
         var empty = <div className="alert alert-info">Cart is empty</div>;
 
         return (
-	        <div id="cart" className="cart">
-	          <div className="panel panel-default">
+        	  <div className="panel panel-default">
 	            <div className="panel-body">
 	              {items.length > 0 ? body : empty}
 	              <div className="cart__total">Total: {this.state.total} {this.state.currency}</div>
 	            </div>
 	          </div>
-	        </div>
         );
     }
 });
