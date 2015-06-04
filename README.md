@@ -3,7 +3,7 @@ A shopping cart example written in Spring and React using Nashorn for templating
 
 ##Demo
 
-A demo is available at 
+A demo is available at https://salty-anchorage-7333.herokuapp.com/
 
 ##JDK 8 Notes
 Nashorn is still in active development, it is recommended that you use the latest version possible.
