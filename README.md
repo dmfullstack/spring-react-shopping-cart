@@ -1,6 +1,9 @@
 # spring-react-shopping-carty
 A shopping cart example written in Spring and React using Nashorn for templating.
 
+##Demo
+
+A demo is available at 
 
 ##JDK 8 Notes
 Nashorn is still in active development, it is recommended that you use the latest version possible.
@@ -18,5 +21,12 @@ File -> Import -> Existing Projects into Workspace
 
 ## How to run it ?
 
-The application does not work yet when packaged as a Spring Boot fat JAR or WAR.
-You should run Run IsomorphicApplication main class in your IDE.
+You should run Run IsomorphicApplication main class in your IDE or run 
+```
+gradle build
+```
+
+and then 
+```
+java -Dserver.port=80 -jar build/libs/spring-react-shopping-cart.jar
+```
